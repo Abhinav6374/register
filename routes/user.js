@@ -18,8 +18,8 @@ router.get("/register", (req, res) => {
 var transporter = nodemailer.createTransport({
   service:"gmail",
   auth:{
-    user:"EMAIL_ADDRESS",
-    pass:"EMAIL_PASS"
+    user:"process.env.EMAIL_ADDRESS",
+    pass:"process.env.EMAIL_PASS"
   },
   tls:{
     rejectUnauthorized:false
